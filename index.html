@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مفاجأة ليارا</title>
+    <style>
+        body {
+            background-color: #fff0f6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 350px;
+        }
+        img { width: 100%; max-width: 250px; border-radius: 15px; margin-bottom: 15px; }
+        h1 { color: #ff4d94; font-size: 22px; margin-bottom: 20px; }
+        p { color: #555; line-height: 1.6; }
+        button {
+            background-color: #ff4d94;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+            transition: 0.3s;
+        }
+        button:hover { transform: scale(1.05); background-color: #ff1a75; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="step1">
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3VxdXphOHM5ZnN2azRkZzR6NHRreDdqZzV4Z3V4Z3V4Z3V4Z3V4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/K7S9A8hYw9eB6/giphy.gif" alt="لطيف">
+        <h1>يارا.. عندي الك سؤال بجنن!</h1>
+        <button onclick="nextStep(2)">شُـو هو؟ احكي</button>
+    </div>
+
+    <div id="step2" class="hidden">
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp1eHN3Znh6Z3V4Z3V4Z3V4Z3V4Z3V4Z3V4Z3V4Z3V4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/c76IJLufpNwSULPk2m/giphy.gif" alt="سؤال">
+        <h1>بتحبيني ولا لأ؟ 😉</h1>
+        <button onclick="nextStep(3)">أكييييد بحبك</button>
+        <button onclick="alert('ما في خيار لأ.. جربي مرة تانية 😂')">لأ ما بحبك</button>
+    </div>
+
+    <div id="step3" class="hidden">
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbm5xdXphOHM5ZnN2azRkZzR6NHRreDdqZzV4Z3V4Z3V4Z3V4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/l41lTfuxV6ZlUqV0Q/giphy.gif" alt="حب">
+        <h1>يا ويلي محلاكي! ❤️</h1>
+        <p>والله إنك بتجنني وكل الكلام ما بيوصف جمال قلبك.</p>
+    </div>
+</div>
+
+<script>
+    function nextStep(step) {
+        document.getElementById('step1').classList.add('hidden');
+        document.getElementById('step2').classList.add('hidden');
+        document.getElementById('step3').classList.add('hidden');
+        document.getElementById('step' + step).classList.remove('hidden');
+    }
+</script>
+
+</body>
+</html>
